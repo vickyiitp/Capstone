@@ -1,0 +1,375 @@
+/*
+ * style.css
+ * This file contains all the styles for the Collaborate landing page.
+ */
+
+/* 1. Global Styles & Variables
+-------------------------------------------------- */
+:root {
+    --blue: #3b82f6;
+    --green: #22c55e;
+    --purple: #8b5cf6;
+    --yellow: #f59e0b;
+    --pink: #ec4899;
+    --indigo: #6366f1;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-600: #4b5563;
+    --gray-800: #1f2937;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body {
+    font-family: 'Popins', sans-serif;
+    background-color: var(--gray-50);
+    margin:0;
+    color: var(--gray-800);
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+@media (min-width: 768px) {
+    .container { max-width: 768px; }
+}
+@media (min-width: 1024px) {
+    .container { max-width: 1024px; }
+}
+@media (min-width: 1280px) {
+    .container { max-width: 1280px; }
+}
+
+.section-title {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.bg-light {
+    background-color: var(--gray-100);
+}
+
+/* 2. Navbar
+-------------------------------------------------- */
+.navbar {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-brand-i {
+    margin-right: 0.7rem;
+    color: transparent;        /* Makes 'fill' look empty like SVG */
+    -webkit-text-stroke: 2px currentColor; /* Simulates a stroke effect */
+    stroke-linecap: round;     /* Not fully supported on font icons, more visual tweak */
+    font-size: 24px;
+    color: #000;               /* Match your SVG stroke color */
+
+}
+
+.nav-links {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--gray-600);
+    transition: color 0.2s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.nav-links a.active {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+/* 3. Buttons
+-------------------------------------------------- */
+.btn {
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 9999px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-lg {
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+}
+
+.btn-primary {
+    background-color: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+.btn-outline {
+    background-color: var(--white);
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+.btn-outline:hover {
+    background-color: #eff6ff;
+}
+
+.btn-green {
+    background-color: var(--green);
+    color: var(--white);
+    border-color: var(--green);
+}
+
+.btn-green:hover {
+    background-color: #16a34a;
+    border-color: #16a34a;
+}
+
+.btn-outline-purple {
+    background-color: var(--white);
+    color: var(--purple);
+    border-color: var(--purple);
+}
+
+.btn-outline-purple:hover {
+    background-color: #f5f3ff;
+}
+
+/* 4. Header Section
+-------------------------------------------------- */
+.header {
+    background: linear-gradient(to bottom right, #dbeafe, #e9d5ff);
+    text-align: center;
+    padding:80px 20px;
+}
+
+@media (min-width: 768px) {
+    .header {
+        padding: 8rem 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-content h1 {
+        font-size: 2.5rem; /* 40px */
+    }
+}
+
+.header-content p {
+    font-size: 1.25rem;
+    max-width: 48rem;
+    margin: 0 auto 3rem auto;
+    color: var(--gray-600);
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .header-buttons {
+        flex-direction: row;
+    }
+}
+
+/* 5. Features Section & Cards
+-------------------------------------------------- */
+.features-section {
+    padding: 2rem 0;
+}
+
+.features-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.card-icon {
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: var(--gray-600);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.card-arrow {
+    align-self: flex-end;
+}
+
+/* Icon Colors */
+.icon-blue { stroke: var(--blue); }
+.icon-green { stroke: var(--green); }
+.icon-purple { stroke: var(--purple); }
+.icon-yellow { stroke: var(--yellow); }
+.icon-pink { stroke: var(--pink); }
+.icon-indigo { stroke: var(--indigo); }
+
+
+/* 6. CTA Section
+-------------------------------------------------- */
+.cta-section {
+    padding: 4rem 0;
+}
+
+.cta-content {
+    text-align: center;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .cta-buttons {
+        flex-direction: row;
+    }
+}
+
+/* 7. Footer
+-------------------------------------------------- */
+.footer {
+    background-color: var(--gray-800);
+    color: var(--white);
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+    }
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-links a {
+    color: var(--gray-300);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links a {
+    color: var(--gray-300);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+    color: var(--white);
+}

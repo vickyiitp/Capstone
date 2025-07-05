@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Projects - Collaborate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="expr.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo">
+                <i class="fa-solid fa-user-group nav-brand-icon"></i>
+                Collaborate
+            </a>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="sstories.html">Success Stories</a>
+                <a href="#" class="active">Explore Projects</a>
+                <a href="blog.html">Blog</a>
+                
+            </div>
+            <button class="button button-primary">Login / Signup</button>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="filter-section">
+                <h1>Find Your Next Contribution Project</h1>
+                <p>Filter by skills, category, startup, or status</p>
+                <div class="filter-controls">
+                    <input type="text" id="search-query" placeholder="🔎 Search Projects..." class="input">
+                    <select id="category-filter" class="select">
+                        <option value="All Categories">All Categories</option>
+                        <option value="React">React</option>
+                        <option value="UI/UX">UI/UX</option>
+                        <option value="Python">Python</option>
+                        <option value="Machine Learning">Machine Learning</option>
+                        <option value="Full stack">Full stack</option>
+                        <option value="Blockchain">Blockchain</option>
+                        <option value="Web3">Web3</option>
+                        <option value="Health">Health</option>
+                        <option value="Wellness">Wellness</option>
+                        <option value="Social">Social</option>
+                        <option value="GraphQL">GraphQL</option>
+                        <option value="IOT">IOT</option>
+                        <option value="Sensors">Sensors</option>
+                        <option value="Data">Data</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="E-commerce">E-commerce</option>
+                        <option value="Php">Php</option>
+                        <option value="MySQL">MySQL</option>
+                        <option value="Node.js">Node.js</option>
+                        <option value="C#">C#</option>
+                        <option value="3D">3D</option>
+                                               
+                    </select>
+                    <select id="skill-filter" class="select">
+                        <option value="">All Skills</option>
+                        <option value="React Native">React Native</option>
+                        <option value="Supply Chain">Supply Chain</option>
+                        <option value="Open Source">Open Source</option>
+                        <option value="Social Media">Social Media</option>
+                        <option value="Data Analysis">Data Analysis</option>
+                        <option value="3D Development">3D Development</option>
+                    </select>
+                    <select id="status-filter" class="select">
+                        <option value="">All Statuses</option>
+                        <option value="Open">Open</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                    </select>
+                    <button id="apply-filters-btn" class="button button-filter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-sm"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                        Apply Filter 
+                    </button>
+                </div>
+            </div>
+            <div id="no-results" class="no-results" >
+                <p>No projects found matching your criteria.</p>
+            </div>
+
+            <div id="projects-grid" class="projects-grid list-view">
+                <h2 class="projects-grid list-view">Top Recommended Projects</h2>
+            
+                <div class="project-card featured list-view-card" >
+                    <img src="" >              
+                    <div class="card-content list-view-content">
+                        <h3>Ecofriendly Living App</h3>
+                        <div class="startup-info">
+                        
+                            <p>GreenTech Innovators</p>
+                        </div>
+                        <p class="description">
+                            Develop a mobile app to promote sustainable living practices.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Mobile</span>
+                            <span class="tag">Sustainability</span>
+                            <span class="tag">React Native</span>
+                            <span class="tag">UI/Ux</span>
+                        </div>
+                    <span class="status-badge status-open">Open</span>                      
+                   
+                    </div>
+                    <a href="PrIntro.html"> 
+                    <button class="button card-button" >View Details</button>
+                    </a>
+                </div>
+                 <div class="project-card featured list-view-card" data-category="Health" data-skill="Open source" data-status="In Progress">
+                    <img src="" >              
+                    <div class="card-content list-view-content">
+                        <h3>Virtual Reality Therapy</h3>
+                        <div class="startup-info">
+                            <p>VRHealth Innovations</p>
+                        </div>
+                        <p class="description">
+                          Create VR experiences to aid in therapy and rehabilitation for patients.  
+                        </p>
+                        <div class="tags">
+                            <span class="tag">VR</span>
+                            <span class="tag">Health</span>
+                            <span class="tag">Unity</span>
+                            <span class="tag">3D Development</span>                         
+                        </div>
+                        <span class="status-badge status-in-progress">In Progress</span> 
+                    </div>
+                    <button class="button card-button" >View Details</button> 
+                </div>
+                <div class="project-card featured list-view-card" data-category="Social" data-skill="Social Media" data-status="completed">
+                    <img src="" >              
+                    <div class="card-content list-view-content">
+                        <h3>Decentralized Social Media</h3>
+                        <div class="startup-info">
+                            <p>DSocial Labs</p>
+                        </div>
+                        <p class="description">
+                           Help build a decentralized social media platform with focus on user privacy.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Social Media</span>
+                            <span class="tag">Decentralized</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">GraphQL</span>
+                        </div>
+                        <span class="status-badge status-completed">Completed</span> 
+                    </div>
+                    <button class="button card-button" >View Details</button> 
+                </div>
+                <div class="project-card featured list-view-card" data-category="IoT" data-skill="Supply chain" data-status="Open">
+                    <img src="" >              
+                    <div class="card-content list-view-content">
+                        <h3>AI-Powered Education Platform</h3>
+                        <div class="startup-info">
+                            <p>EduSmart Solutions</p>
+                        </div>
+                        <p class="description">
+                            Build an AI platform to personalize learning experiences for students.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Education</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Full-Stack</span>
+                        </div>
+                        <span class="status-badge status-open">Open</span> 
+                    </div>
+                    <button class="button card-button" >View Details</button> 
+                </div>
+               
+                
+                <div class="project-card featured list-view-card" data-category="Wellnes" data-skill="Data Analysis" data-status="Open">
+                    <img src="" >              
+                    <div class="card-content list-view-content">
+                        <h3>Mental Wellness Mobile App</h3>
+                        <div class="startup-info">
+                            <p>MindfulTech</p>
+                        </div>
+                        <p class="description">
+                           Design and develop a mobile app to promote mental wellness and mindfulness.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Health</span>
+                            <span class="tag">Wellness</span>
+                            <span class="tag">Mobile</span>
+                            <span class="tag">UI/UX</span>
+                            <span class="tag">React Native</span>
+                        </div>
+                        <span class="status-badge status-open">Open</span> 
+                    </div>
+                    <button class="button card-button" >View Details</button> 
+                </div>
+                <div class="project-card featured list-view-card" data-category="Block chain" data-skill="Supply Chain" data-status="In Progres">
+                    <img src="" >              
+                    <div class="card-content list-view-content">
+                        <h3>Blockchain Supply Chain Tracker</h3>
+                        <div class="startup-info">
+                            <p>BlockVerify Systems</p>
+                        </div>
+                        <p class="description">
+                          Create a blockchain-based system for tracking supply chain transparency.  
+                        </p>
+                        <div class="tags">
+                            <span class="tag">Blockchain</span>
+                            <span class="tag">Supply Chain</span>
+                            <span class="tag">Solidity</span>
+                            <span class="tag">Web3</span>
+                        </div>
+                        <span class="status-badge status-in-progress">In Progress</span> 
+                    </div>
+                    <button class="button card-button" >View Details</button> 
+                </div>
+                <div class="project-card featured list-view-card" data-category="Full stack" data-skill="Open Source" data-status="open">
+                    <img src="" >              
+                    <div class="card-content list-view-content">
+                        <h3>Smart Farming IoT System</h3>
+                        <div class="startup-info">
+                            <p>AgriTech Solutions</p>
+                        </div>
+                        <p class="description">
+                           Develop an IoT system to help farmers monitor and optimize crop yields 
+                        </p>
+                        <div class="tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag">Agriculture</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Sensors</span>
+                            <span class="tag">Data Analysis</span>
+                        </div>
+                        <span class="status-badge status-open">Open</span> 
+                    </div>
+                    <button class="button card-button" >View Details</button> 
+                </div>
+                <div class="project-card featured list-view-card" data-category="E-commerce" data-skill="Data Analysis" data-status="Open">
+                    <img src="" >              
+                    <div class="card-content list-view-content">
+                        <h3>Open Source E-commerce Platform</h3>
+                        <div class="startup-info">
+                            <p>OpenCommerce</p>
+                        </div>
+                        <p class="description">
+                           Contribute to building an open-source e-commerce platform for small businesses.
+                        </p>
+                        <div class="tags">
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Open Source</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <span class="status-badge status-open">Open</span> 
+                    </div>
+                    <button class="button card-button" >View Details</button> 
+                </div>
+                
+            </div> 
+           
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog">Blog</a>
+                <a href="faq.html">FAQ</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M22 4s-.7 2.1-2 3.4c1.6 1.4 3.3 4.4 3.3 9.6 0 1.2-.3 2.3-.8 3.4H3c-1.4 0-2.5-1.1-2.5-2.5 0-2.8 2.1-5.2 5-5.8-1.4-1.6-2.2-3.8-2.2-6.1C3.3 3.1 5.1 1 7.5 1c1.2 0 2.3.5 3.1 1.4C11.8 1.5 13 1 14.5 1 18.9 1 22 4 22 4z"/></svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+<script src="expr.js"></script>  
+</body>
+</html>
