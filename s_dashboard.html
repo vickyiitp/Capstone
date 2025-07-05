@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Dashboard</title>
+    <link rel="stylesheet" href="s_dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">
+                    <i class="fa-solid fa-user-group nav-brand-icon"></i> </i> Collaborate
+                </a>
+                <div class="nav-links">
+                    <a href="shome.html">Home</a>
+                    <a href="#" class="active">Dashboard</a>
+                    <a href="s_post.html">Post Project</a>
+                    <a href="#projects">My Projects</a>                   
+                
+                </div>
+                <div class="nav-actions">
+                    <button class="icon-button"><i class="fas fa-bell"></i></button>
+                    <button class="profile-button"><i class="fas fa-user"></i> Profile</button>                    
+                </div>
+            </div>
+        </nav>
+        <div class="main-content">
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i> Overview</a></li>
+                    <li><a href="#"><i class="fas fa-clipboard-list"></i> My Projects</a></li>
+                    <li><a href="#"><i class="fas fa-plus-circle"></i> Post New Project</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> My Team</a></li>
+                    <li><a href="#"><i class="fas fa-bell"></i> Notifications</a></li>
+                    <li><a href="#"><i class="fas fa-chart-line"></i> Analytics</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                </ul>
+            </aside>
+            <main class="content">
+                <h1 class="main-title">Startup Dashboard</h1>
+
+                <div class="overview-grid">
+                    <div class="card overview-card">
+                        <div class="card-header">
+                            <i class="fa-solid fa-file-plus icon-blue"></i>
+                            <h3 class="card-title">Total Projects Posted</h3>
+                        </div>
+                        <div class="card-content">
+                            <p class="overview-value">5</p>
+                        </div>
+                    </div>
+                    <div class="card overview-card">
+                        <div class="card-header">
+                            <i class="fas fa-users icon-green"></i>
+                            <h3 class="card-title">Total Contributors Joined</h3>
+                        </div>
+                        <div class="card-content">
+                            <p class="overview-value">12</p>
+                        </div>
+                    </div>
+                    <div class="card overview-card">
+                        <div class="card-header">
+                            <i class="fas fa-user-plus icon-yellow"></i>
+                            <h3 class="card-title">Applications  Pending</h3>
+                        </div>
+                        <div class="card-content">
+                            <p class="overview-value">4</p>
+                        </div>
+                    </div>
+                    <div class="card overview-card">
+                        <div class="card-header">
+                            <i class="fas fa-eye icon-purple"></i>
+                            <h3 class="card-title">Views on Projects</h3>
+                        </div>
+                        <div class="card-content">
+                            <p class="overview-value">250</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card active-projects-card" id="projects">
+                    <div class="card-header">
+                        <h2 class="card-title">My Active Projects</h2>
+                    </div>
+                    <div class="card-content">
+                        <table class="projects-table">
+                            <thead>
+                                <tr>
+                                    <th>Project Name</th>
+                                    <th>Applications</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Build Mobile App</td>
+                                    <td>8</td>
+                                    <td><span class="status-badge status-in-progress">In Progress</span></td>
+                                    <td class="action-buttons">
+                                        <button><i class="fas fa-eye"></i> View</button>
+                                        <button><i class="fas fa-edit"></i> Edit</button>
+                                        <button class="destructive"><i class="fas fa-times-circle"></i> Close</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Design Logo</td>
+                                    <td>3</td>
+                                    <td><span class="status-badge status-open">Open</span></td>
+                                    <td class="action-buttons">
+                                        <button><i class="fas fa-eye"></i> View</button>
+                                        <button><i class="fas fa-edit"></i> Edit</button>
+                                        <button class="destructive"><i class="fas fa-times-circle"></i> Close</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Website Redesign</td>
+                                    <td>12</td>
+                                    <td><span class="status-badge status-in-progress">In Progress</span></td>
+                                    <td class="action-buttons">
+                                        <button><i class="fas fa-eye"></i> View</button>
+                                        <button><i class="fas fa-edit"></i> Edit</button>
+                                        <button class="destructive"><i class="fas fa-times-circle"></i> Close</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Marketing Campaign</td>
+                                    <td>5</td>
+                                    <td><span class="status-badge status-open">Open</span></td>
+                                    <td class="action-buttons">
+                                        <button><i class="fas fa-eye"></i> View</button>
+                                        <button><i class="fas fa-edit"></i> Edit</button>
+                                        <button class="destructive"><i class="fas fa-times-circle"></i> Close</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="grid-container">
+                    <div class="card notifications-card">
+                        <div class="card-header">
+                            <h2 class="card-title">Notifications</h2>
+                        </div>
+                        <div class="card-content">
+                            <div class="notification">
+                                <p class="notification-title">
+                                    <i class="fas fa-user-plus icon-blue"></i> Contributor Request
+                                </p>
+                                <p class="notification-message">John Doe applied to your project: Build Mobile App</p>
+                                <p class="notification-date">July 24, 2024, 10:00 AM</p>
+                            </div>
+                            <div class="notification">
+                                <p class="notification-title">
+                                    <i class="fas fa-comment-dots icon-green"></i> Team Message
+                                </p>
+                                <p class="notification-message">Jane Smith sent a message: Need update on logo design</p>
+                                <p class="notification-date">July 24, 2024, 09:30 AM</p>
+                            </div>
+                            <div class="notification">
+                                <p class="notification-title">
+                                    <i class="fas fa-bolt icon-purple"></i> Platform Update
+                                </p>
+                                <p class="notification-message">New feature: Project Milestones is now available!</p>
+                                <p class="notification-date">July 23, 2024, 03:00 PM</p>
+                            </div>
+                             <div class="notification">
+                                <p class="notification-title">
+                                    <i class="fas fa-user-plus icon-blue"></i> Contributor Request
+                                </p>
+                                <p class="notification-message">Alice Johnson applied to your project: Marketing Campaign</p>
+                                <p class="notification-date">July 22, 2024, 12:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
