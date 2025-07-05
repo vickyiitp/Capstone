@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Startup Dashboard – My Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      padding: 20px;
+      color: #1f2937;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    .header h1 {
+      font-size: 26px;
+      color: #111827;
+    }
+    .add-btn {
+      background: #2563eb;
+      color: white;
+      padding: 10px 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .add-btn:hover {
+      background: #1d4ed8;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #f1f5f9;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    .project-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .project-status {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 12px;
+      color: #4b5563;
+    }
+    .project-actions button {
+      background: #10b981;
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      margin-right: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .project-actions button:hover {
+      background: #059669;
+    }
+    .project-actions .edit-btn {
+      background: #f59e0b;
+    }
+    .project-actions .edit-btn:hover {
+      background: #d97706;
+    }
+    .project-actions .delete-btn {
+      background: #ef4444;
+    }
+    .project-actions .delete-btn:hover {
+      background: #dc2626;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>My Projects</h1>
+      <button class="add-btn">+ Add New Project</button>
+    </div>
+
+    <div class="project-grid">
+      <div class="project-card">
+        <div class="project-title">AI Chat Assistant</div>
+        <div class="project-status">Status: In Progress</div>
+        <div class="project-actions">
+          <button>View</button>
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Remote Team Management Tool</div>
+        <div class="project-status">Status: Completed</div>
+        <div class="project-actions">
+          <button>View</button>
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Startup Hiring Portal</div>
+        <div class="project-status">Status: Open for Contributions</div>
+        <div class="project-actions">
+          <button>View</button>
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Blockchain Voting App</div>
+        <div class="project-status">Status: Planning</div>
+        <div class="project-actions">
+          <button>View</button>
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">E-learning LMS Platform</div>
+        <div class="project-status">Status: In Progress</div>
+        <div class="project-actions">
+          <button>View</button>
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-title">Green Energy Monitor</div>
+        <div class="project-status">Status: Completed</div>
+        <div class="project-actions">
+          <button>View</button>
+          <button class="edit-btn">Edit</button>
+          <button class="delete-btn">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

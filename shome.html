@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Startup Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+       font-family: 'Popins', sans-serif;
+       background-color: #f9fafb;
+       margin:0;
+       color: #1f2937;
+    }
+    .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    }
+
+    @media (min-width: 768px) {
+        .container { max-width: 768px; }
+    }
+    @media (min-width: 1024px) {
+        .container { max-width: 1024px; }
+    }
+    @media (min-width: 1280px) {
+        .container { max-width: 1280px; }
+    }
+    
+    .navbar {
+        background-color: #fff;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-brand {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--gray-800);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-brand-i {
+        margin-right: 0.7rem;
+        color: transparent;        /* Makes 'fill' look empty like SVG */
+        -webkit-text-stroke: 2px currentColor; /* Simulates a stroke effect */
+        stroke-linecap: round;     /* Not fully supported on font icons, more visual tweak */
+        font-size: 24px;
+        color: #000;               /* Match your SVG stroke color */
+
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    @media (min-width: 768px) {
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #1f2937;
+        transition: color 0.2s ease-in-out;
+    }
+
+    .nav-links a:hover {
+        color: #3b82f6;
+    }
+
+    .nav-links a.active {
+        color: #3b82f6;
+        font-weight: 600;
+    }
+    .profile-dropdown {
+      position: relative;
+    }
+    .profile-dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      border: 1px solid #ddd;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      padding: 10px;
+      z-index: 1;
+    }
+    .profile-dropdown:hover .profile-dropdown-content {
+      display: block;
+    }
+
+    .profile-dropdown-content a{
+        text-decoration:none;
+        color:#0563e7;
+    }
+    .header {
+    background: linear-gradient(to bottom right, #dbeafe, #e9d5ff);
+    text-align: center;
+    padding:40px 20px;
+    }
+    .header-content h1 {
+        font-size: 2.5rem; /* 40px */
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+    }
+    
+    .header-content p {
+        font-size: 1.25rem;
+        max-width: 48rem;
+        margin: 0 auto 3rem auto;
+        color: #4b5563;
+    }
+
+    .header-buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+    .header {
+        padding: 3rem 0;
+    }
+    }
+
+    @media (min-width: 768px) {
+        .header-content h1 {
+            font-size: 2.5rem; /* 60px */
+        }
+    }
+
+    @media (min-width: 768px) {
+        .header-buttons {
+            flex-direction: row;
+        }
+    }
+    .btn {
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 9999px;
+    transition: all 0.2s ease-in-out;
+    }
+   
+    .btn-primary {
+        background-color: #3b82f6;
+        color: #fff;
+        border-color: #3b82f6;
+    }
+
+    .btn-primary:hover {
+        background-color: #2563eb;
+        border-color: #2563eb;
+    } 
+    .btn-outline {
+    background-color:#fff;
+    color: #2563eb;
+    border-color: #2563eb;
+    }
+
+    .btn-outline:hover {
+        background-color: #eff6ff;
+    }
+    .profile-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    }
+
+    .profile-button {
+        background-color: #3b82f6;
+        color: white;
+        border-radius: 9999px;
+        padding: 0.5rem 1rem;
+    }
+
+    .profile-button i {
+        margin-right: 0.5rem;
+    }
+    .section-title {
+    font-size: 1.5rem; /* 24px */
+    font-weight: 600;
+    color:rgb(85, 84, 84)
+   
+    }
+
+    .features-section {
+    padding:20px;
+    margin:auto;
+    width:1100px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding:20px;
+    }
+
+    @media (min-width: 768px) {
+        .features-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .features-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 768px) {
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding:1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    
+    .card h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .card p {
+        color:#4b5563;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }  
+            
+    /* .cards, .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    } */
+    .metrics {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .metric-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    .metric-box {
+      background: #ffffff;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      width: 200px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .notifications {
+      background-color: #fff9e6;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    .footer {
+    background-color:#1f2937 ;
+    color:#fff ;
+    padding: 2rem 0;
+     }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+        .footer-container {
+            flex-direction: row;
+        }
+    }
+
+    .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        color: #d1d5db;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+    }
+
+    .footer-links a:hover {
+        color: #fff;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .social-links a {
+        color: #d1d5db;
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+    }
+
+    .social-links a:hover {
+        color: #fff;
+    }
+  </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="/" class="nav-brand">
+                <i class="fa-solid fa-user-group nav-brand-icon"></i>  Collaborate               
+            </a>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="s_dashboard.html">Dashboard</a>
+                <a href="post.html">Post Project</a>
+                <a href="#">My Projects</a>              
+            </div>  
+            <div class="profile-dropdown">            
+              <div class="nav-actions">                    
+                    <button class="profile-button"><i class="fas fa-user"></i> Profile</button>                    
+              </div>
+              <div class="profile-dropdown-content">                 
+                  <a href="#">Settings</a><br>
+                  <a href="#">Logout</a>
+              </div>
+            </div>           
+            
+        </div>
+    </nav>
+  
+    <section class="header">
+        <div class="container header-content">
+            <h1>Welcome, Team MVA!</h1>
+            <p>Manage your startup projects and discover top contributors.</p>
+            <div class="header-buttons">
+                <button  class="btn btn-primary">Post New Project</button>
+                <button class="btn btn-outline">Go to Dashboard</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">        
+            <h1 class="section-title">Your Active Projects</h1>
+            <div class="features-grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div>                       
+                        <h3>Real-time Cybersecurity Tool</h3>
+                        <p>Contributors: 4 | Status: Ongoing</p>
+                        <button class="btn btn-outline">Manage Project</button>
+                    </div>                    
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <div>                        
+                        <h3>Startup Portfolio Builder</h3>
+                        <p>Contributors: 2 | Status: In Review</p>
+                        <button class="btn btn-outline">Manage Project</button>
+                    </div>                    
+                </div>                
+              </div>        
+    </section>
+    <section class="features-section">        
+            <h2 class="section-title">Contributor Requests</h2>
+            <div class="features-grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div>                       
+                        <h3>Rahul S. - Frontend Developer</h3>
+                        <p>Requested to join: AI Resume Builder</p>
+                        <button class="btn btn-primary">Approve</button>
+                        <button class="btn btn-outline">Reject</button>
+                    </div>                    
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <div>                        
+                        <h3>Sneha P. - UI/UX Designer</h3>
+                        <p>Requested to join: LMS Platform</p>
+                        <button class="btn btn-primary">Approve</button>
+                        <button class="btn btn-outline">Reject</button>
+                    </div>                    
+                </div>                
+            </div>        
+    </section> 
+    <section class="features-section">        
+            <h2 class="section-title">Basic Analytics</h2>             
+            <div class="metrics">
+                <div class="metric-box">
+                  <h3>4</h3>
+                  <p>Total Projects</p>
+                </div>
+                <div class="metric-box">
+                  <h3>12</h3>
+                  <p>Contributors Joined</p>
+                </div>
+                <div class="metric-box">
+                  <h3>3</h3>
+                  <p>Applications Pending</p>
+                </div>
+            </div>
+    </section> 
+    <section class="features-section">        
+            <h2 class="section-title">Platform Announcements</h2>             
+            <div class="notifications">
+            🚀  New Feature: Startup's can now provide certificates!
+            </div>
+            <div class="notifications">
+              🔔 Reminder: Complete your startup profile for better visibility.
+            </div>
+    </section>
+
+
+  <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Blog</a>
+                <a href="faq.html">FAQ</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>                
+            </div>
+            <p>Collaborate &copy; 2025. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 1.4 3.3 4.4 3.3 4.4s-1.4 1.4-2.1 2.1c-.2.2-.4.4-.6.6c-.2.2-.4.4-.6.6c-2.1 2.1-4.2 4.2-6.3 6.3c-2.1 2.1-4.2 4.2-6.3 6.3c-.2.2-.4.4-.6.6c-.2.2-.4.4-.6.6c-1.4 1.4-2.1 2.1-2.1 2.1s3-1.7 4.4-3.3c1.4-1.6 3.4-2 3.4-2s-2.1.7-3.4 2c-1.4 1.4-2 3.3-2 3.3s1.7-1.4 3.3-2.1c1.6-.7 3.3-1.4 4.4-2.1c1.1-.7 2.1-1.4 3.3-2.1c1.2-.7 2.1-1.4 3.3-2.1c1.2-.7 2.1-1.4 2.1-1.4z"/></svg></a>
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+            </div>
+        </div>
+    </footer> 
+</body>
+</html>
